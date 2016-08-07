@@ -21,6 +21,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         self.imagePickerViewController = UIImagePickerController()
         self.imagePickerViewController.delegate = self
         self.imagePickerViewController.sourceType = .Camera
+        self.imagePickerViewController.showsCameraControls = false
+        self.imagePickerViewController.prefersStatusBarHidden()
         
         self.overlayView = UIView(frame: CGRect(x: 0, y: 0, width: (self.view.frame.size.width), height: (self.view.frame.size.height)))
         
